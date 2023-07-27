@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; // deixa o container ser medido pela borda.
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; /*o cover cobre todo o espaço visivel*/
+
+  /*Transformando em uma única propriedade*/
+
+  background: url(/assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+/* "*" ao lado do body corresponde ao seletor universal, o que significa que ele irá aplicar isso para todos os elementos dentro do body. */
+
+#container {
+  width: 360px;
+  margin: 56px auto auto;
+  /* border: 1px solid red; */
+}
+
+/* Tanto faz o uso do 'margin: auto;' apenas, como o uso de 'margin-right: auto' e 'margin-left:auto'. */
+
+/* Em elementos img eu não consigo aplicar o "margin auto". Logo, para se aplicar a "margin: auto" é preciso transformar o "display: block". */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* links */
+
+ul {
+  list-style: none; // tira os pontos da lista e deixa sem estilo.
+}
+
+ul li a {
+  border: 1px solid red;
+  display: flex; /* caso fosse "display: block", a propriedade abaixo teria que ser substituída por "text-align:center". */
+  justify-content: center; /* lembrar do eixo y */
+  align-items: center; /* lembrar do eixo x */
+  padding: 16px 24px;
+}
