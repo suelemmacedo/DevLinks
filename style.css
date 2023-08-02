@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; // deixa o container ser medido pela borda.
+  box-sizing: border-box; /* deixa o container ser medido pela borda. */
 }
 
 body {
@@ -26,6 +26,7 @@ body * {
 #container {
   width: 360px;
   margin: 56px auto auto;
+  padding: 0 24px;
   /* border: 1px solid red; */
 }
 
@@ -49,15 +50,64 @@ body * {
 }
 
 /* links */
-
 ul {
-  list-style: none; // tira os pontos da lista e deixa sem estilo.
+  list-style: none; /*tira os pontos da lista e deixa sem estilo. */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* funciona dando espaço entre os elementos, não dá espaço nem em cima e nem embaixo apenas nos elementos. */
+  padding: 24px 0;
 }
 
 ul li a {
-  border: 1px solid red;
   display: flex; /* caso fosse "display: block", a propriedade abaixo teria que ser substituída por "text-align:center". */
   justify-content: center; /* lembrar do eixo y */
   align-items: center; /* lembrar do eixo x */
   padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/* pseudo-select */
+
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid white;
+}
+
+/* existem propriedades liberadas pelo flex, ou seja, só existem se o flex liberá-las, o que ocorre quando colocamos a propriedade "display: flex" */
+/* Social Links */
+
+#social-links {
+  display: flex;
+  font-size: 24px;
+  padding: 24px 0;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+#social-links a {
+  /* importante as 3 primeiras propriedades para alinhar os ícones dentro do border-radius */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
 }
