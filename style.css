@@ -4,6 +4,27 @@
   box-sizing: border-box; /* deixa o container ser medido pela borda. */
 }
 
+/* Dark/light mode */
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg) no-repeat top center/cover;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
 body {
   /*
   background-image: url(./assets/bg-mobile.jpg);
@@ -13,12 +34,12 @@ body {
 
   /*Transformando em uma única propriedade*/
 
-  background: url(/assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bg-url);
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 /* "*" ao lado do body corresponde ao seletor universal, o que significa que ele irá aplicar isso para todos os elementos dentro do body. */
@@ -33,6 +54,8 @@ body * {
 /* Tanto faz o uso do 'margin: auto;' apenas, como o uso de 'margin-right: auto' e 'margin-left:auto'. */
 
 /* Em elementos img eu não consigo aplicar o "margin auto". Logo, para se aplicar a "margin: auto" é preciso transformar o "display: block". */
+
+/* Profile */
 
 #profile {
   text-align: center;
@@ -49,6 +72,14 @@ body * {
   margin-top: 8px;
 }
 
+/* Switch */
+#switch button {
+  height: 32px;
+  width: 32px;
+  background: #fff var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 9999px;
+}
 /* links */
 ul {
   list-style: none; /*tira os pontos da lista e deixa sem estilo. */
@@ -63,8 +94,8 @@ ul li a {
   justify-content: center; /* lembrar do eixo y */
   align-items: center; /* lembrar do eixo x */
   padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -73,16 +104,15 @@ ul li a {
   transition: background 0.2s;
 }
 
-/* pseudo-select */
-
+/* Pseudo-Select */
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
 /* existem propriedades liberadas pelo flex, ou seja, só existem se o flex liberá-las, o que ocorre quando colocamos a propriedade "display: flex" */
-/* Social Links */
 
+/* Social Links */
 #social-links {
   display: flex;
   font-size: 24px;
@@ -103,7 +133,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--highlight-color);
 }
 
 footer {
