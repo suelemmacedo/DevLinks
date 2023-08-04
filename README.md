@@ -18,20 +18,21 @@
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Esse [projeto](https://suelemmacedo.github.io/DevLinks/) foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
 - JavaScript
 - Git e Github
 - Figma
 
-## 💻 Projeto
+## 💻 [Projeto](https://suelemmacedo.github.io/DevLinks/)
 
 O DevLinks é um agregador de links para usar como cartão de visitas online.
+Acesse o projeto nesse [LINK](https://suelemmacedo.github.io/DevLinks/).
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
