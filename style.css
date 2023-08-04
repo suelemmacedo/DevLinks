@@ -45,7 +45,9 @@ body * {
 /* "*" ao lado do body corresponde ao seletor universal, o que significa que ele irá aplicar isso para todos os elementos dentro do body. */
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
+  max-height: 712px;
   margin: 56px auto auto;
   padding: 0 24px;
   /* border: 1px solid red; */
